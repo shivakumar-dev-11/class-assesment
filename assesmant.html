@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSESMENT</title>
+</head>
+
+<body>
+    <div class="display-center">
+        <form>
+            <input id="username" type="text" placeholder="Enter your username  here">
+            <input id="email" type="email" placeholder="Enter your email here">
+            <input id="password" type="password" placeholder="Enter your password here">
+            <p id="message"></p>
+            <button type="submit" onclick="check()">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        let user = document.getElementById("username");
+        let mail = document.getElementById("email");
+        let password = document.getElementById("password");
+        let message = document.getElementById("message");
+
+        let userData = [
+            {
+                username: "shiva",
+                email: "shiva@example.com",
+                password: "password123"
+            },
+
+        ];
+        function check() {
+
+            for (let i = 0; i < userData.length; i++) {
+                if (user.value === userData[i].username && mail.value === userData[i].email) {
+                    message.innerHTML = "User already exists";
+                }
+                return;
+                userData.push({
+                    username: user.value,
+                    email: mail.value,
+                    password: password.value
+                });
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
