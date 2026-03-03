@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginpage</title>
+</head>
+
+<body>
+    <form class="flex flex-col gap-4 DISPLAY-CENTER">
+        <div>
+            <H4>USERNAME</H4>
+            <input type="text" id="username" placeholder=" enter your username" class="px-6 py-2   ">
+        </div>
+        <div>
+            <H4>PASSWORD</H4>
+            <input type="password" id="password" placeholder=" enter your password">
+            <button type="submit" onclick="login()">
+                LOGIN
+            </button>
+        </div>
+    </form>
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+
+
+        let information = {
+            username: "akash",
+            password: "akash123"
+        };
+        function login() {
+
+
+            if (username.value === "" || username.value === null && password.value === "" || password.value === null) {
+                alert(" please fill the details ")
+                if (username.value === information.username && password.value === information.password) {
+                    alert("username already exist")
+                    return;
+                    information.push({
+                        username: username.value,
+                        password: password.value
+                    });
+
+                }
+            }
+            else {
+                alert(" login successful")
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
