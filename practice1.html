@@ -19,7 +19,18 @@
         <button id="sub" type="button" disabled> submit</button>
     </form>
     <script>
+        function submitbtn() {
+            let c1 = document.getElementById("first").checked;
+            let c2 = document.getElementById("second").checked;
 
+            if (c1 && c2) {
+                document.getElementById("sub").disabled = false;
+
+            }
+            else {
+                document.getElementById("sub").disabled = true;
+            }
+        };
 
     </script>
 </body>
